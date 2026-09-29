@@ -1,6 +1,6 @@
-<!-- BANNER: drop the image at figures/banner.png (or change the path below).
-     Recommended ~1280x320 so it doesn't dominate the page on GitHub. -->
-![Home Credit Default Risk](figures/banner.png)
+<img width="1673" height="688" alt="image" src="https://github.com/user-attachments/assets/581dd41e-7df6-42f4-a9b9-3894b7028cf0" />
+
+
 
 # Home Credit Default Risk — Gradient Boosting Ensemble
 
@@ -33,7 +33,7 @@ competition's winning private score was approximately 0.806.
 | Blend | 0.79573 | 0.79566 | −0.00007 |
 | **Blend gain** | **+0.00122** | **+0.00126** | +0.00004 |
 
-This is the number I'd point to first. Every model here early-stops on the same fold it is
+Every model here early-stops on the same fold it is
 scored on, which biases out-of-fold estimates upward, so the OOF figure had to be treated as
 optimistic by an unknown amount until a held-out score existed. It turns out to be worth about
 0.0001 — because the AUC-versus-iteration curve is very flat near its optimum at
