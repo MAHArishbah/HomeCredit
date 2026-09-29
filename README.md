@@ -112,7 +112,6 @@ random_state=42).split(X, y))`. Materialising the split list once, rather than r
 model, makes it structurally impossible for the three out-of-fold vectors to fall out of
 row alignment — which would silently corrupt the blend rather than raise.
 
-![Per-fold ROC-AUC for each model](figures/fold_spread.png)
 
 Fold-level AUCs, showing why single-fold comparisons are not informative here:
 
