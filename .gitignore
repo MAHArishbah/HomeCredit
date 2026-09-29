@@ -1,0 +1,55 @@
+# ---------------------------------------------------------------------------
+# Raw Kaggle data — 3.2 GB, downloaded by the notebook's fetch cell.
+# ---------------------------------------------------------------------------
+data/
+
+# ---------------------------------------------------------------------------
+# Large regenerable artifacts. Everything below is reproduced by re-running
+# the notebook; none of it is a result. The engineered-feature parquets alone
+# are 248 MB and train_features.parquet exceeds GitHub's 100 MB file limit.
+# ---------------------------------------------------------------------------
+outputs/*.parquet
+outputs/*.joblib
+outputs/fold*.json
+outputs/booster_fold*.json
+outputs/cat_fold*.cbm
+outputs/lgb_fold*.txt
+
+# Mid-run checkpoints written inside the fold loops; superseded by the final
+# oof_<model>.npy files, and partially-filled by design.
+outputs/*_partial.npy
+outputs/preds/*_partial.npy
+
+# Subsumed by outputs/oof_all_models.csv, which carries the same OOF column.
+outputs/oof_predictions.csv
+
+# ---------------------------------------------------------------------------
+# Working notes, not deliverables
+# ---------------------------------------------------------------------------
+*.pdf
+lgbm_catboost_cells.py
+
+# ---------------------------------------------------------------------------
+# Tooling / local state
+# ---------------------------------------------------------------------------
+.claude/
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Credentials — never commit these
+kaggle.json
+.kaggle/
+*.env
+.env
+
+# Experiment tracking local caches
+wandb/
+catboost_info/
